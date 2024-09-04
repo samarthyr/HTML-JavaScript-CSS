@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+<title>Program 13b</title>
+<style type="text/css">
+.layer1style
+{
+border:solid thick black;
+padding:1em;
+width:300px;
+background-color:green;
+position:absolute;
+top:0px;
+left:0px;
+z-index:0;
+}
+.layer2style
+{
+border:solid thick red;
+padding:1em;
+width:300px;
+background-color:blue;
+position:absolute;
+top:30px;
+left:90px;
+z-index:0;
+}
+.layer3style
+{
+border:solid thick green;
+
+padding:1em;
+width:300px;
+background-color:purple;
+position:absolute;
+top:50px;
+left:180px;
+z-index:0;
+}
+</style>
+<script type="text/javascript">
+var topLayer="layer3";
+var origPos;
+function mover(toTop,pos)
+{
+var newTop=document.getElementById(toTop).style;
+newTop.zIndex="10";
+topLayer=document.getElementById(toTop).id;
+origPos=pos;
+}
+function moveBack()
+{
+var oldTop=document.getElementById(topLayer).style;
+oldTop.zIndex=origPos;
+}
+</script>
+</head>
+<body>
+<h2 style="text-align:center;color:red"> The stacking of Paragraphs </br>Samarth Y R</br>4MT21IS035</h2>
+<div style="z-index:1;" class="layer1style" id="layer1"
+onmouseover="mover('layer1','1')" onmouseout="moveBack()">
+
+Once upon a time there lived a poor widow and her son Jack. One day, Jack’s mother told him to sell their only cow. Jack went to the market and on the way he met a man who wanted to buy his cow. Jack asked, “What will you give me in return for my cow?” The man answered, “I will give you five magic beans!” Jack took the magic beans and gave the man the cow. But when he reached home, Jack’s mother was very angry. She said, “You fool! He took away your cow and gave you some beans!” She threw the beans out of the window. Jack was very sad and went to sleep without dinner.
+
+</div>
+<div style="z-index:2;" class="layer2style" id="layer2"
+onmouseover="mover('layer2','2')" onmouseout="moveBack()">
+
+ONCE upon a time there were four little Rabbits, and their names were— Flopsy, Mopsy, Cotton-tail, and Peter.
+
+They lived with their Mother in a sand-bank, underneath the root of a very big fir tree.
+
+"NOW, my dears," said old Mrs. Rabbit one morning, "you may go into the fields or down the lane, but don't go into Mr. McGregor's garden: your Father had an accident there; he was put in a pie by Mrs. McGregor."
+
+"NOW run along, and don't get into mischief. I am going out."
+
+</div>
+
+<div style="z-index:3;" class="layer3style" id="layer3"
+onmouseover="mover('layer3','3')" onmouseout="moveBack()">
+
+A shoemaker, by no fault of his own, had become so poor that at last he had nothing left but leather for one pair of shoes. So in the evening, he cut out the shoes which he wished to begin to make the next morning, and as he had a good conscience, he lay down quietly in his bed, commended himself to God, and fell asleep. In the morning, after he had said his prayers, and was just going to sit down to work, the two shoes stood quite finished on his table. He was astounded, and knew not what to say to it. 
+
+</div>
+</body>
+</html>

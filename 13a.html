@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<title>Program 13a</title>
+<style type="text/css">
+.layer1Style
+{
+border: solid thick black;
+padding: 1em;
+width:300px;
+background-color:yellow;
+position:absolute;
+top:100px;
+left:200px;
+
+z-index:0;
+}
+.layer2Style
+{
+border: solid thick red;
+padding: 1em;
+width:300px;
+background-color:BLUE;
+position:absolute;
+top:120px;
+left:220px;
+z-index:0;
+}
+.layer3Style
+{
+border: solid thick green;
+padding: 1em;
+width:300px;
+background-color:purple;
+position:absolute;
+top:140px;
+left:240px;
+z-index:0;
+}
+</style>
+<script type="text/javascript">
+var topLayer="layer3";
+function mover(toTop)
+{
+var oldTop=document.getElementById(topLayer).style;
+var newTop=document.getElementById(toTop).style;
+oldTop.zIndex="0";
+newTop.zIndex="10";
+topLayer=document.getElementById(toTop).id;
+}
+</script>
+</head>
+<body>
+<h2>Stacking of Paragraphs</br>
+Samarth Y R</br>4MT21IS035</h2>
+<div style="z-index: 10;" class="layer1Style" id="layer1"
+onmouseover="mover('layer1')">
+Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. So when they were old enough, she sent them out into the world to seek their fortunes.
+The first little pig was very lazy. He didn't want to work at all and he built his house out of straw. The second little pig worked a little bit harder but he was somewhat lazy too and he built his house out of sticks. Then, they sang and danced and played together the rest of the day.
+The third little pig worked hard all day and built his house with bricks. It was a sturdy house complete with a fine fireplace and chimney. It looked like it could withstand the strongest winds.
+</div>
+<div style="z-index: 2;" class="layer2Style" id="layer2"
+onmouseover="mover('layer2')">
+Once upon a time there was a dear little girl who was loved by every one who looked at her, but most of all by her grandmother, and there was nothing that she would not have given to the child. Once she gave her a little cap of red velvet, which suited her so well that she would never wear anything else. So she was always called Little Red Riding Hood.
+One day her mother said to her, "Come, Little Red Riding Hood, here is a piece of cake and a bottle of wine. Take them to your grandmother, she is ill and weak, and they will do her good.
+</div>
+<div style="z-index: 0;" class="layer3Style" id="layer3"
+onmouseover="mover('layer3')">
+There was once a velveteen rabbit, and in the beginning he was really splendid. He was fat and bunchy, as a rabbit should be; his coat was spotted brown and white, he had real thread whiskers, and his ears were lined with pink sateen. On Christmas morning, when he sat wedged in the top of the Boy’s stocking, with a sprig of holly between his paws, the effect was charming.
+There were other things in the stocking, nuts and oranges and a toy engine, and chocolate almonds and a clockwork mouse, but the Rabbit was quite the best of all. 
+</div>
+</body>
+</html>
